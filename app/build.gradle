@@ -50,11 +50,11 @@ android {
 
     buildTypes {
         release {
-            println "running proguard"
-            shrinkResources true
             minifyEnabled false
+            shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.config
+            debuggable false
+            jniDebuggable false
             zipAlignEnabled true
         }
     }
